@@ -1,0 +1,91 @@
+<div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-4">
+      <mdc-form-field>
+        <mdc-text-field
+          outlined
+          type="text"
+          label="Enter City Name"
+          [(ngModel)]="cityName"
+          (keyup.enter)="getWeatherByForecast()"
+        ></mdc-text-field>
+      </mdc-form-field>
+    </div>
+  </div>
+</div>
+
+<div class="mdc-layout-grid">
+  <mdc-linear-progress *ngIf="isLoading"></mdc-linear-progress>
+  <div class="mdc-layout-grid__inner" *ngIf="!isLoading && !hasNoCity">
+    <div class="mdc-layout-grid__cell--span-4">
+      <h3>
+        Weather in {{ weatherDetail.name }}, {{ weatherDetail.sys.country }}
+      </h3>
+      <p>{{ weatherDetail.main.temp | celsius }}&#176;C</p>
+      <p>{{ weatherDetail.weather[0].description | titlecase }}</p>
+      <p>{{ weatherDetail.dt * 1000 | date: "medium" }}</p>
+      <p>Wind: {{ weatherDetail.wind.deg }} {{ weatherDetail.wind.speed }}</p>
+      <p>Cloudiness: {{ weatherDetail.weather[0].description | titlecase }}</p>
+      <p>Pressure: {{ weatherDetail.main.pressure }}</p>
+      <p>Humidity: {{ weatherDetail.main.humidity }}</p>
+      <p>Sunrise:{{ weatherDetail.sys.sunrise | date: "h:mm a" }}</p>
+      <p>Sunset: {{ weatherDetail.sys.sunset | date: "h:mm a" }}</p>
+      <p>
+        Geo coords: [{{ weatherDetail.coord.lat }},
+        {{ weatherDetail.coord.lon }}]
+      </p>
+    </div>
+
+    <div class="mdc-layout-grid__cell--span-8">
+      <h3>5 Days / 3 Hours Weather Forecast</h3>
+      <div class="mdc-layout-grid__inner">
+        <div
+          class="mdc-layout-grid__cell--span-4"
+          *ngFor="let forecast of weatherForecast"
+        >
+          <mdc-card class="demo-card">
+            <mdc-card-primary-action>
+              <div class="mdc-layout-grid__inner demo-card__primary">
+                <div class="mdc-layout-grid__cell--span-3 demo-card__title">
+                  <h2 mdcHeadline6>
+                    {{ forecast.main.temp | celsius }} &#176;C
+                  </h2>
+                </div>
+                <div
+                  class="mdc-layout-grid__cell--span-9 mdc-layout-grid--align-right demo-card__subtitle"
+                >
+                  <mdc-chip-set>
+                    <mdc-chip class="custom-chip--leading-icon-color">
+                      <img [src]="forecast.weather[0].icon | weatherIcon" />
+                      <mdc-chip-text>{{
+                        forecast.weather[0].description | titlecase
+                      }}</mdc-chip-text>
+                    </mdc-chip>
+                  </mdc-chip-set>
+                </div>
+              </div>
+
+              <div class="demo-card__secondary" mdcBody2>
+                <p>{{ forecast.dt * 1000 | date: "medium" }}</p>
+                <p>Wind: {{ forecast.wind.deg }} {{ forecast.wind.speed }}</p>
+                <p>
+                  Cloudiness: {{ forecast.weather[0].description | titlecase }}
+                </p>
+                <p>Pressure: {{ forecast.main.pressure }}</p>
+                <p>Humidity: {{ forecast.main.humidity }}</p>
+              </div>
+            </mdc-card-primary-action>
+          </mdc-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mdc-layout-grid" *ngIf="hasNoCity">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-4">
+      <h1>City not found!</h1>
+    </div>
+  </div>
+</div>

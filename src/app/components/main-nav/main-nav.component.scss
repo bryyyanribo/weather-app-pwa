@@ -1,0 +1,26 @@
+@import "../../../../src/variable.scss";
+
+.weather {
+  @include mdc-drawer-border-color($mdc-theme-secondary);
+  @include mdc-drawer-item-icon-ink-color(#fff);
+  @include mdc-drawer-item-text-ink-color(#fff);
+
+  &__container {
+    height: 100vh !important;
+  }
+
+  &__appBar {
+    @include mdc-top-app-bar-fill-color($mdc-theme-secondary);
+    @include mdc-top-app-bar-ink-color(#fff);
+    @include mdc-top-app-bar-icon-ink-color(#fff);
+  }
+
+  &__content {
+    padding: 32px;
+    margin-top: 32px;
+  }
+
+  &__isActive {
+    @include mdc-drawer-surface-fill-color($mdc-theme-secondary);
+  }
+}

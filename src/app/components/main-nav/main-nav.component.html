@@ -1,0 +1,31 @@
+<mdc-drawer drawer="dismissible" [open]="isDrawerOpen" class="weather">
+  <mdc-drawer-header title="Weather App"></mdc-drawer-header>
+  <mdc-list-divider></mdc-list-divider>
+  <mdc-drawer-content>
+    <mdc-list>
+      <mdc-list-item
+        *ngFor="let page of pages"
+        routerLinkActive="weather__isActive"
+        [routerLink]="page.url"
+      >
+        <mdc-icon mdcListItemGraphic *ngIf="page.icon">{{ page.icon }}</mdc-icon
+        >{{ page.label }}
+      </mdc-list-item>
+    </mdc-list>
+  </mdc-drawer-content>
+</mdc-drawer>
+<div class="weather__container" mdcDrawerAppContent>
+  <mdc-top-app-bar class="weather__appBar">
+    <mdc-top-app-bar-row>
+      <mdc-top-app-bar-section align="start" title="Weather">
+        <button mdcTopAppBarNavIcon (click)="toggleDrawer()">
+          <mdc-icon>menu</mdc-icon>
+        </button>
+      </mdc-top-app-bar-section>
+    </mdc-top-app-bar-row>
+  </mdc-top-app-bar>
+
+  <div class="weather__content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

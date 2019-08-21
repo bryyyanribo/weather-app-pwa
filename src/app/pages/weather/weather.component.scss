@@ -1,0 +1,42 @@
+@import "../../../../src/variable.scss";
+
+mdc-text-field {
+  @include mdc-text-field-focused-outline-color(red);
+  @include mdc-text-field-outline-color(#fff);
+  width: 100%;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+}
+
+.demo-card {
+  width: 100%;
+}
+
+.demo-card__primary {
+  padding: 16px;
+}
+
+.demo-card__title {
+  margin: 0;
+
+  h2 {
+    margin-top: 12px !important;
+  }
+}
+
+.demo-card__subtitle {
+  @include mdc-theme-prop(color, $mdc-theme-secondary);
+
+  mdc-chip-set {
+    margin: 0 !important;
+  }
+}
+
+.demo-card__secondary {
+  @include mdc-theme-prop(color, $mdc-theme-secondary);
+
+  padding: 0 1rem 8px 1rem;
+}
