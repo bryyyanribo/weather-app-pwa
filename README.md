@@ -23,3 +23,6 @@ Go to `chrome://flags` to enable all of PWA Experiments
 
 - Run `npm build --prod`
 - Run `http-server -c-l dist/<project-name>`
+
+
+## License
