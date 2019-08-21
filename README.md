@@ -1,4 +1,8 @@
 # Weather PWA App
+An Web Application showcasing Angular as PWA Desktop App with Material Design Components
+
+## Library Used
+- Material Components: https://github.com/trimox/angular-mdc-web
 
 ## Add API Key
 - Go to `https://openweathermap.org/api` to generate your own API key. 
