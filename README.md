@@ -6,7 +6,7 @@
 - Run `ng serve` for a dev server and navigate to http://localhost:4200/.
 
 ## Chrome Flags
-Go to `chrome://flags` to and enable all of PWA Experiments
+Go to `chrome://flags` to enable all of PWA Experiments
 
 ## Build Project and Install App As PWA
 
