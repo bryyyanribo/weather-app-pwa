@@ -1,5 +1,16 @@
 # Weather PWA App
 
+## Add API Key
+- Go to `https://openweathermap.org/api` to generate your own API key. 
+- Create an enum file and name it `apikey.ts` under utilities/resources.
+
+Example: 
+```
+export ENUM APIKEY {
+ KEY = <API KEY HERE>
+}
+```
+
 ## How to Run Project on Dev Server
 
 - Run `npm install` to install dependencies.
