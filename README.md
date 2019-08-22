@@ -30,6 +30,10 @@ export enum APIKEY {
 - Run `ng build --prod`
 - Run `http-server -c-l dist/weather-and-places`
 
+## Image: 
+
+![Image](image.png?raw=true)
+
 ## License
 ```
 The MIT License
