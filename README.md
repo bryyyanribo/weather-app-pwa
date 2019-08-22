@@ -29,7 +29,7 @@ export enum APIKEY {
 
 - Run `ng build --prod`
 - Run `http-server -c-l dist/weather-and-places`
-- On the omnibox click on install app for you to get started with the Application
+- Enable All PWA
 
 ## License
 ```
