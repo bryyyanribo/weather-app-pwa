@@ -59,7 +59,6 @@ export class WeatherComponent implements OnInit, OnDestroy {
         (cityWeather: WeatherForecast) => {
           this.isLoading = false
           this.hasNoCity = false
-          console.log(cityWeather)
           this.weatherForecast = cityWeather.list
           this.getWeatherByCityName()
         },
