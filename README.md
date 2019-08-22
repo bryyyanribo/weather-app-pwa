@@ -5,13 +5,13 @@ A Web Application showcasing Angular as PWA Desktop App with Material Design Com
 - Material Components: https://github.com/trimox/angular-mdc-web
 
 ## Add API Key
-- Go to `https://openweathermap.org/api` to generate your own API key. 
-- Create an enum file and name it `apikey.ts` under utilities/resources.
+- Go to `https://openweathermap.org/api` to generate your own API key, please do note that you have to register. 
+- Create an enum file and name it `apikey.ts` under `src/app/utilities/resources`.
 
 Example: 
 ```
-export ENUM APIKEY {
- KEY = <API KEY HERE>
+export enum APIKEY {
+ KEY = "<API KEY HERE>"
 }
 ```
 
@@ -21,14 +21,14 @@ export ENUM APIKEY {
 - Run `ng serve` for a dev server and navigate to http://localhost:4200/.
 
 ## Chrome Flags
-Go to `chrome://flags` to enable all of PWA Experiments
+- Go to `chrome://flags` and search for `PWA`
+- Enable `Desktop PWAs installable from the omnibox`
 
 ## Build Project and Install App As PWA
 
-- Run `npm build --prod`
-- Run `http-server -c-l dist/<project-name>`
+- Run `ng build --prod`
+- Run `http-server -c-l dist/weather-and-places`
 - On the omnibox click on install app for you to get started with the Application
-
 
 ## License
 ```
