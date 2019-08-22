@@ -1,5 +1,5 @@
 # Weather PWA App
-An Web Application showcasing Angular as PWA Desktop App with Material Design Components
+A Web Application showcasing Angular as PWA Desktop App with Material Design Components
 
 ## Library Used
 - Material Components: https://github.com/trimox/angular-mdc-web
@@ -27,6 +27,7 @@ Go to `chrome://flags` to enable all of PWA Experiments
 
 - Run `npm build --prod`
 - Run `http-server -c-l dist/<project-name>`
+- On the omnibox click on install app for you to get started with the Application
 
 
 ## License
