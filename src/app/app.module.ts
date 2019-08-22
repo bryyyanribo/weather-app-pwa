@@ -5,6 +5,8 @@ import { environment } from "../environments/environment"
 import { AppRoutingModule } from "./app-routing.module"
 import { AppComponent } from "./app.component"
 import { HttpClientModule } from "@angular/common/http"
+import { MainNavModule } from "./components/main-nav/main-nav.module"
+import { WeatherModule } from "./pages/weather/weather.module"
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,7 +16,9 @@ import { HttpClientModule } from "@angular/common/http"
     ServiceWorkerModule.register("ngsw-worker.js", {
       enabled: environment.production
     }),
-    HttpClientModule
+    HttpClientModule,
+    MainNavModule,
+    WeatherModule
   ],
   providers: [],
   bootstrap: [AppComponent]
