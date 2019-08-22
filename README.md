@@ -18,6 +18,7 @@ export enum APIKEY {
 ## How to Run Project on Dev Server
 
 - Run `npm install` to install dependencies.
+- Run `npm install -g http-server`
 - Run `ng serve` for a dev server and navigate to http://localhost:4200/.
 
 ## Chrome Flags
