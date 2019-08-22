@@ -23,13 +23,12 @@ export enum APIKEY {
 
 ## Chrome Flags
 - Go to `chrome://flags` and search for `PWA`
-- Enable `Desktop PWAs installable from the omnibox`
+- Enable all Desktop PWAs
 
 ## Build Project and Install App As PWA
 
 - Run `ng build --prod`
 - Run `http-server -c-l dist/weather-and-places`
-- Enable All PWA
 
 ## License
 ```
