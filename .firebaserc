@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "portfolio-compilation"
+  },
+  "targets": {
+    "portfolio-compilation": {
+      "hosting": {
+        "weather-app": [
+          "weather-pwa-application"
+        ]
+      }
+    }
+  }
+}

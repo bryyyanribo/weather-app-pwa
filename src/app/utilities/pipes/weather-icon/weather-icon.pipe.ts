@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from "@angular/core"
 })
 export class WeatherIconPipe implements PipeTransform {
   transform(icon: string): string {
-    const weatherURL = `http://openweathermap.org/img/wn/${icon}@2x.png`
+    const weatherURL = `https://openweathermap.org/img/wn/${icon}@2x.png`
     return weatherURL
   }
 }
